@@ -3,6 +3,8 @@
 ==================================================
 More convenient electronic resource link management for libraries using ezproxy or another web proxy tool
 
+[Demo of "Add the Proxy" as added at Towson University](libraries.towson.edu/proxybuilder/)
+
 Getting Started
 --------------------------------------
 1. Download the ZIP file
