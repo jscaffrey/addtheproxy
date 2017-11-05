@@ -1,0 +1,51 @@
+body {
+	font-family: 'Trebuchet MS', sans-serif;
+	font-weight: normal;
+}
+input[type="text"] {
+	width:60%;
+}
+#rawURL {
+    width:60%;
+}
+#display {
+	word-wrap: break-word;
+	width: 100%;
+	width:60%; 
+}
+p:first-child {
+	margin-top:0;
+}
+p.header {
+	margin-top: -20px;
+	font-family: 'Raleway', 'Trebuchet MS', sans-serif;
+}
+div.header {
+	text-align:center; 
+	margin: 50px 0;
+}
+#indicator, #usermessages{
+	color: green;
+}
+h2 {
+	font-family: 'Sriracha', Helvetica, Arial, sans-serif;
+}
+h3 {
+	font-family: 'Hind Vadodara', sans-serif;
+	text-transform: uppercase;
+	font-size:14px;
+	font-weight: 500;
+	color: #999;
+	letter-spacing: 0;
+	margin-bottom: 0;
+	margin-top: 30px;
+}
+h3:first-of-type {
+	margin-top: 0;
+}
+.side-image {
+	max-width: 700px;
+	width: 100%;
+	margin-bottom: 40px;
+}
+#addproxybtn > img {vertical-align: sub; height: 14px;}

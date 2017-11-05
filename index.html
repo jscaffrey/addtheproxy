@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Add the Proxy</title>
+  <meta name="description" content="Prepend Links to University Resources">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="skeleton-custom.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Sriracha' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind+Vadodara' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="main container">
+<div class="row">
+  <div class="twelve columns header" style="">
+    <h2>Add the Proxy</h2>
+    <p class="header">Make your links to University e-resources work from anywhere off campus.</p>
+  </div>
+</div><!--1st row-->
+<div class="row">
+  <div class="six columns">
+    <img class="side-image" src="library-at-night.jpg">
+  </div>
+  <div class="six columns">
+	<h3>Step 1</h3>
+    <p>Enter link to the library resource.</p>
+    <input id="rawURL" type="text" placeholder="URL">
+    <button id="prependDisplay">Add the Proxy!</button>
+	<h3>Step 2</h3>
+    <p>Copy new link<span id="indicator"></span> into your assignment, syllabus, or email.</p>
+    <input type="text" id="display"><!--Target-->
+    <button id="addproxybtn" class="my_clip_button"  data-clipboard-target="#display">Copy</button><!--Trigger-->
+	<h3>Step 3</h3>
+    <p class="step-3">(Recommended) Test the link from an off campus network.</p>
+  </div>
+
+</div><!--2nd row-->
+</div><!--container-->
+<script>
+  var btn = document.getElementById('addproxybtn');
+  var clipboard = new Clipboard(btn);
+  clipboard.on('success', function(e) {
+    $( "#addproxybtn" ).html("<img src='youreawesome.png' alt='success' height='13px'> Copied!");
+  });
+  clipboard.on('error', function(e) {
+    console.log(e);
+  });
+</script>
+<script>
+$(document).ready(function(){
+  //when click the button
+  $("#prependDisplay").click(function(){
+  //get the value of the input and concatenate both strings   
+    //edit prepend here
+    var prepend = "http://proxy-tu.researchport.umd.edu/login?url=";
+    var rawURL = $("#rawURL").val();
+    //removes old prepend
+    //use "" instead of regular expressions
+    var originalURL = rawURL.replace("http://proxy-tu.researchport.umd.edu/login?url=", "").replace(/\s|\t|\r|\n/g, "");
+    //adds new prepend (determined by variable prepend as defined here)
+    var proxiedLink = prepend + originalURL;
+    //displays the new proxied link in the element with the id set to "display"
+    $( "#display" ).val( proxiedLink );
+  });
+
+  $("input, textarea")
+       .focus(function(){ 
+      $(this).select();
+       });
+     $("#rawURL")
+       .focus(function(){ 
+      $("#addproxybtn").html("Copy");
+      $("#display").val("");
+       });
+});
+</script>
+</body>
+</html>
