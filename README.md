@@ -3,7 +3,7 @@
 ==================================================
 More convenient electronic resource link management for libraries using ezproxy or another web proxy tool
 
-[Demo of "Add the Proxy" as added at Towson University](libraries.towson.edu/proxybuilder/)
+[View Demo](http://www.juliacaffrey.com/addtheproxy)
 
 Getting Started
 --------------------------------------
@@ -18,7 +18,7 @@ Customize for your institution
 2. Replace the image of the library and replace the file name on line 25 of index.html. 
 3. Update the ``alt`` text for the image on line 25 of index.html
 4. Set your institution name on line 20 of index.html
-5. (Optional) Change the name of the tool (line 19 of index.html, directory name) and button name (line 31) to whatever works for your institution. Examples of names used include "The Great Prepender" (Simmons College, "Proxy Builder" (Towson University), and "Link Builder" (Loyola Notre Dame Library).
+5. (Optional) Change the name of the tool (line 19 of index.html, directory name) and button name (line 31) to whatever works for your institution. Examples of names used include "The Great Prepender" (Simmons College, "Proxy Builder" (Towson University), and "LNDL Link Creator" (Loyola Notre Dame Library).
 
 Dependencies
 --------------------------------------
