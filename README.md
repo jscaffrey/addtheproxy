@@ -3,7 +3,7 @@
 ==================================================
 More convenient electronic resource link management for libraries using ezproxy or another web proxy tool
 
-[View Demo](http://www.juliacaffrey.com/addtheproxy)
+[View Demo](http://projects.juliacaffrey.com/addtheproxy)
 
 Getting Started
 --------------------------------------
