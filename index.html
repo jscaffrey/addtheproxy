@@ -56,12 +56,18 @@ $(document).ready(function(){
   //get the value of the input and concatenate both strings   
     //edit prepend here
     var prepend = "http://proxy-tu.researchport.umd.edu/login?url=";
+    //edit Factiva SID here
+    var factivaSID = "S003Gzt2szkZXVyMTZyMTQtMpQrMTatNtmm5FfH4dQmYtfhWb7NQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB";
     var rawURL = $("#rawURL").val();
+    var factiva = "factiva.com";
     //removes old prepend
     //use "" instead of regular expressions
     var originalURL = rawURL.replace("http://proxy-tu.researchport.umd.edu/login?url=", "").replace(/\s|\t|\r|\n/g, "");
     //adds new prepend (determined by variable prepend as defined here)
     var proxiedLink = prepend + originalURL;
+    if ( proxiedLink.indexOf(factiva) != -1) {
+      proxiedLink += "&xsid=" + factivaSID;
+    }
     //displays the new proxied link in the element with the id set to "display"
     $( "#display" ).val( proxiedLink );
   });
